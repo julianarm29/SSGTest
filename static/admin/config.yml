@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: julianarm29/SSGTest # substitua pelo seu repo
+  name: git-gateway
   branch: main               # branch padrão
 
 media_folder: "static/images"
