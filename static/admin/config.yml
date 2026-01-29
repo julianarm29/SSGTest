@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: julianarm29/SSGTest
   branch: main               # branch padrão
 
 media_folder: "static/images"
