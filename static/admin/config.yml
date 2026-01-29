@@ -6,6 +6,8 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 
+site_url: "https://ssgtest2.netlify.app" # depois atualiza com a URL do Netlify
+
 collections:
 
   - name: "pages"
