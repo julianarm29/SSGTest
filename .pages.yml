@@ -1,0 +1,77 @@
+# Configuração do Pages CMS para Hugo
+media:
+  input: static/uploads
+  output: /uploads
+
+content:
+  # Página inicial
+  - name: homepage
+    label: Página Inicial
+    type: collection
+    path: content/_index.md
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: body
+        label: Conteúdo
+        type: rich-text
+
+  # About
+  - name: about
+    label: Sobre
+    type: collection
+    path: content/about.md
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: body
+        label: Conteúdo
+        type: rich-text
+
+  # Contact
+  - name: contact
+    label: Contato
+    type: collection
+    path: content/contact.md
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: body
+        label: Conteúdo
+        type: rich-text
+
+  # Services (pasta com múltiplos arquivos)
+  - name: services
+    label: Serviços
+    type: collection
+    path: content/services
+    view:
+      fields: [title]
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: body
+        label: Conteúdo
+        type: rich-text
+
+  # Team (pasta com múltiplos arquivos)
+  - name: team
+    label: Equipe
+    type: collection
+    path: content/team
+    view:
+      fields: [title]
+    fields:
+      - name: title
+        label: Nome
+        type: string
+      - name: role
+        label: Cargo
+        type: string
+      - name: body
+        label: Biografia
+        type: rich-text
