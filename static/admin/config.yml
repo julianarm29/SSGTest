@@ -1,18 +1,51 @@
 backend:
-  name: git-gateway
-  branch: main 
+  name: github
+  repo: julianarm29/SSGTest # substitua pelo seu repo
+  branch: main               # branch padrão
 
 media_folder: "static/images"
 public_folder: "/images"
 
-site_url: "ssgtest2.netlify.app" # depois atualiza com a URL do Netlify
-
 collections:
+
   - name: "pages"
     label: "Páginas"
-    folder: "content"
+    files:
+      - file: "content/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+      - file: "content/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+      - file: "content/contact.md"
+        label: "Contato"
+        name: "contact"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+
+  - name: "services"
+    label: "Serviços"
+    folder: "content/services"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Resumo", name: "summary", widget: "text" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+
+  - name: "team"
+    label: "Time"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Cargo", name: "role", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "markdown" }
+      - { label: "Foto", name: "photo", widget: "image" }
