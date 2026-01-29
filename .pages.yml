@@ -8,22 +8,60 @@ public_folder: "/images"
 site_url: "https://seu-site.netlify.app" # depois atualiza com a URL do Netlify
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "content/services"   # onde ficam os arquivos de posts
+
+  # Páginas principais
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "content/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+      - file: "content/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+      - file: "content/contact.md"
+        label: "Contato"
+        name: "contact"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+
+  # Services
+  - name: "services"
+    label: "Serviços"
+    folder: "content/services"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Resumo", name: "summary", widget: "text" }
       - { label: "Corpo", name: "body", widget: "markdown" }
 
-  - name: "pages"
-    label: "Páginas"
-    folder: "content/services"   # onde ficam os arquivos de páginas
+  # Team
+  - name: "team"
+    label: "Time"
+    folder: "content/team"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Corpo", name: "body", widget: "markdown" }
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Cargo", name: "role", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "markdown" }
+      - { label: "Foto", name: "photo", widget: "image" }
+
+  # 404 (opcional)
+  - name: "error_page"
+    label: "Página 404"
+    files:
+      - file: "content/404/index.md"
+        label: "404 Page"
+        name: "404"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Corpo", name: "body", widget: "markdown" }
