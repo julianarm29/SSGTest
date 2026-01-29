@@ -1,0 +1,11 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hugo-serif-theme-1.5"
+[params]
+  google_fonts = [
+    ["Inter", "300,400,500,600,700"]
+  ]
+[params.fonts]
+  base = "Inter"
+  heading = "Inter"
