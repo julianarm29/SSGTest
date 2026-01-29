@@ -8,11 +8,22 @@ public_folder: "/images"
 site_url: "https://seu-site.netlify.app" # depois atualiza com a URL do Netlify
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    folder: "content"
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"   # onde ficam os arquivos de posts
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Resumo", name: "summary", widget: "text" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Páginas"
+    folder: "content/pages"   # onde ficam os arquivos de páginas
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
