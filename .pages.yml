@@ -10,7 +10,7 @@ site_url: "https://seu-site.netlify.app" # depois atualiza com a URL do Netlify
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"   # onde ficam os arquivos de posts
+    folder: "content/services"   # onde ficam os arquivos de posts
     create: true
     slug: "{{slug}}"
     fields:
