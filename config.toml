@@ -1,6 +1,6 @@
 baseURL = "/"
 themesDir = "themes"
-theme = "hugo-serif-theme"
+theme = "hugo-serif-theme-1.5"
 languageCode = "en-us"
 title = "Hugo Serif Theme"
 
